@@ -73,14 +73,16 @@ class App extends Component {
         <main>
           {this.state.dataLoaded
             ?
-              <HomePage
-                categories={this.state.categories}
-                ingredients={this.state.ingredients}
-                areas={this.state.areas}
-                searchCategory={this.searchCategory}
-                searchArea={this.searchArea}
-                searchIngredient={this.searchIngredient}
-                selectMealById={this.selectMealById}
+              <Route exact path="/" render={() => (
+                <HomePage
+                  categories={this.state.categories}
+                  ingredients={this.state.ingredients}
+                  areas={this.state.areas}
+                  searchCategory={this.searchCategory}
+                  searchArea={this.searchArea}
+                  searchIngredient={this.searchIngredient}
+                  selectMealById={this.selectMealById}
+                /> )} 
               />
             :
               "Data loading ..."
