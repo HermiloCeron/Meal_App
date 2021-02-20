@@ -9,6 +9,19 @@ import SearchResults from './components/SearchResults';
 import MealDisplay from './components/MealDisplay';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      mealResults: [],
+      selectMeal: {},
+      area: '',
+      ingredient: '',
+      category: ''
+    }
+  }
+  async componentDidMount(){
+    
+  }
   render(){
     return (
       <div className="App">
