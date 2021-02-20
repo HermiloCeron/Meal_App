@@ -63,8 +63,8 @@ class App extends Component {
     })
   }
   render(){
-    console.log(this.state.mealResults)
-    console.log(this.state.selectMeal)
+    console.log('meal results:',this.state.mealResults)
+    console.log('random meal:',this.state.selectMeal)
     return (
       <div className="App">
         <header>
