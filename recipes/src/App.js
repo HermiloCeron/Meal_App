@@ -87,8 +87,10 @@ class App extends Component {
             :
               "Data loading ..."
           }
-          <SearchResults />
-          <MealDisplay />
+          <Route path="/results" render={() => (
+            <SearchResults /> )} />
+          <Route path="/results/:index" render={() => (
+            <MealDisplay /> )} />
         </main>
         <footer>
           The footer...
