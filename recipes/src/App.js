@@ -26,15 +26,27 @@ class App extends Component {
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      areas: areas.data.meals.map(area=>(area.srtArea))
+      areas: areas.data.meals.map(area=>(area.strArea))
     })
   }
-  searchCategory(e){
+  searchCategory=async(e)=>{
     e.preventDefault();
-    console.log(e.target.category.value)
-
+    const category=e.target.category.value;
+    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c='+category)
+    this.setState({
+      mealResults: mealResults.data.meals
+    })
+  }
+  searchArea=async(e)=>{
+    e.preventDefault();
+    const area=e.target.area.value;
+    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?a='+area)
+    this.setState({
+      mealResults: mealResults.data.meals
+    })
   }
   render(){
+    console.log(this.state.mealResults)
     return (
       <div className="App">
         <header>
@@ -46,6 +58,7 @@ class App extends Component {
             ingredients={this.state.ingredients}
             areas={this.state.areas}
             searchCategory={this.searchCategory}
+            searchArea={this.searchArea}
           />
           <SearchResults />
           <MealDisplay />
