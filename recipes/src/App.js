@@ -14,18 +14,25 @@ class App extends Component {
     this.state={
       mealResults: [],
       selectMeal: {},
-      area: '',
-      ingredient: '',
-      category: ''
+      areas: [],
+      ingredients: [],
+      categories: []
     }
   }
   async componentDidMount(){
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     const ingredients=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
-    console.log(categories);
+    this.setState({
+      categories: categories.data.meals,
+      ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
+      areas: areas.data.meals
+    })
   }
   render(){
+    console.log(this.state.categories);
+    console.log(this.state.ingredients);
+    console.log(this.state.areas);
     return (
       <div className="App">
         <header>
