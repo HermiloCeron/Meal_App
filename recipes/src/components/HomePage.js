@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import axios from 'axios';
 
 class HomePage extends Component{
   constructor(props){
@@ -6,7 +7,8 @@ class HomePage extends Component{
     this.state={
       ingredient:'',
       suggestions: this.props.ingredients,
-      ingredientAuxiliar:''
+      ingredientAuxiliar:'',
+      randomMeal: {}
     }
   }
   handleChange=(e)=>{
@@ -23,6 +25,12 @@ class HomePage extends Component{
     this.setState({
       [name]:value,
       suggestions: suggestions
+    })
+  }
+  async componentDidMount(){
+    const randomMeal=await axios.get("https://www.themealdb.com/api/json/v1/1/random.php");
+    this.setState({
+      randomMeal:randomMeal.data.meals[0]
     })
   }
   render(){
@@ -88,6 +96,12 @@ class HomePage extends Component{
           </select>
           <input type='submit' value='Search'/>
         </form>
+
+        <button
+          onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
+        >
+          Choose a random meal!
+        </button>
 
       </div>
     )

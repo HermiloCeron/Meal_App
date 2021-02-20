@@ -34,7 +34,7 @@ class App extends Component {
   searchCategory=async(e)=>{
     e.preventDefault();
     const category=e.target.category.value;
-    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c='+category)
+    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c='+category);
     this.setState({
       mealResults: mealResults.data.meals
     })
@@ -42,7 +42,7 @@ class App extends Component {
   searchArea=async(e)=>{
     e.preventDefault();
     const area=e.target.area.value;
-    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?a='+area)
+    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?a='+area);
     this.setState({
       mealResults: mealResults.data.meals
     })
@@ -50,13 +50,21 @@ class App extends Component {
   searchIngredient=async(e)=>{
     e.preventDefault();
     const ingredient=e.target.ingredient.value;
-    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?i='+ingredient)
+    const mealResults=await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?i='+ingredient);
     this.setState({
       mealResults: mealResults.data.meals
     })
   }
+  selectMealById=async(e,idMeal)=>{
+    e.preventDefault();
+    const meal=await axios.get('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+idMeal)
+    this.setState({
+      selectMeal: meal.data.meals[0]
+    })
+  }
   render(){
     console.log(this.state.mealResults)
+    console.log(this.state.selectMeal)
     return (
       <div className="App">
         <header>
@@ -72,6 +80,7 @@ class App extends Component {
                 searchCategory={this.searchCategory}
                 searchArea={this.searchArea}
                 searchIngredient={this.searchIngredient}
+                selectMealById={this.selectMealById}
               />
             :
               "Data loading ..."
