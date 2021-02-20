@@ -29,6 +29,11 @@ class App extends Component {
       areas: areas.data.meals.map(area=>(area.srtArea))
     })
   }
+  searchCategory(e){
+    e.preventDefault();
+    console.log(e.target.category.value)
+
+  }
   render(){
     return (
       <div className="App">
@@ -40,6 +45,7 @@ class App extends Component {
             categories={this.state.categories}
             ingredients={this.state.ingredients}
             areas={this.state.areas}
+            searchCategory={this.searchCategory}
           />
           <SearchResults />
           <MealDisplay />

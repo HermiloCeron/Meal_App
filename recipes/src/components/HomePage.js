@@ -8,7 +8,8 @@ const HomePage=(props)=>{
     <div>
       <div>Inside HomePage</div>
       <div>Search by category</div>
-      <form>
+
+      <form onSubmit={(e)=>{props.searchCategory(e)}} >
         <label htmlFor='category'> </label>
         <select name='category'>
           {props.categories.map((category,index)=>(
@@ -22,6 +23,7 @@ const HomePage=(props)=>{
         </select>
         <input type='submit' value='Search'/>
       </form>
+
     </div>
   )
 }
