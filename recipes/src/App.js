@@ -24,22 +24,23 @@ class App extends Component {
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     const ingredients=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
     this.setState({
-      categories: categories.data.meals,
+      categories: categories.data.meals.map(category=>(category.strCategory)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      areas: areas.data.meals
+      areas: areas.data.meals.map(area=>(area.srtArea))
     })
   }
   render(){
-    console.log(this.state.categories);
-    console.log(this.state.ingredients);
-    console.log(this.state.areas);
     return (
       <div className="App">
         <header>
           The header...
         </header>
         <main>
-          <HomePage />
+          <HomePage
+            categories={this.state.categories}
+            ingredients={this.state.ingredients}
+            areas={this.state.areas}
+          />
           <SearchResults />
           <MealDisplay />
         </main>
