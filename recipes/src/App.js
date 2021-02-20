@@ -20,7 +20,10 @@ class App extends Component {
     }
   }
   async componentDidMount(){
-    
+    const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
+    const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
+    const ingredients=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
+    console.log(categories);
   }
   render(){
     return (
