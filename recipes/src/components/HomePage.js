@@ -102,6 +102,7 @@ class HomePage extends Component{
         >
           Choose a random meal!
         </button>
+        <p></p>
 
       </div>
     )

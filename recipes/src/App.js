@@ -17,6 +17,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
+      ads: [],
       dataLoaded: false
     }
   }
@@ -24,10 +25,13 @@ class App extends Component {
     const ingredients=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
+    //Testing weather ticker or advertisements
+    const ads=await axios.get("http://quotes.rest/qod.json?category=inspire");
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
+      ads: ads.data.quote.author
       dataLoaded: true
     })
   }
