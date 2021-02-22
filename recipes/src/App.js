@@ -30,14 +30,14 @@ class App extends Component {
       headers: {
           Accept: 'application/json'
       }
-    
+
     })
-  
+
   // this.setState({
   //   joke: joke.data.joke,
   // })
 
-        
+
 
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
@@ -83,7 +83,7 @@ class App extends Component {
     this.props.history.push('/results/' + idMeal);
   }
 
-  
+
   render(){
     console.log('meal results:',this.state.mealResults)
     console.log('random meal:',this.state.selectMeal)
@@ -91,6 +91,19 @@ class App extends Component {
       <div className="App">
         <header>
           The header...
+          <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img src="https://randomuser.me/api/portraits/men/18.jpg" className="d-block w-25" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" className="d-block w-25" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src="https://randomuser.me/api/portraits/women/20.jpg" className="d-block w-25" alt="..." />
+              </div>
+            </div>
+          </div>
         </header>
         <main>
           {this.state.dataLoaded
@@ -104,17 +117,17 @@ class App extends Component {
                   searchArea={this.searchArea}
                   searchIngredient={this.searchIngredient}
                   selectMealById={this.selectMealById}
-                /> )} 
+                /> )}
               />
             :
               "Data loading ..."
           }
           <Route path="/results" render={() => (
             <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
-      
-        
+
+
           <Route path="/results/:index" render={(routerProps) => (
-            <MealDisplay  
+            <MealDisplay
               mealResults={this.state.mealResults}
               mealDisplay={this.state.selectMeal}
               {...routerProps}
