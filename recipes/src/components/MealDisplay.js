@@ -8,7 +8,7 @@ const MealDisplay=(props)=>{
   console.log(mealToDisplay);
 
   return(
-    <div>s
+    <div>
          {mealToDisplay ? (
                 <div className="main">
 
