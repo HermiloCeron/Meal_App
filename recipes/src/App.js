@@ -103,8 +103,12 @@ class App extends Component {
             :
               "Data loading ..."
           }
-          <SearchResults />
-          <MealDisplay />
+          <Router>
+          <Route path="/results" render={() => (
+          <SearchResults mealResults={this.state.mealResults}
+          />
+          )} />
+          <MealDisplay /></Router>
         </main>
         <footer>
           The footer...
