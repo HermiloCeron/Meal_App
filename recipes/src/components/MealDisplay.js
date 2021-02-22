@@ -1,8 +1,14 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom';
 
 const MealDisplay=(props)=>{
   return(
-    <div>Inside MealDisplay</div>
+    <div>
+      <div>Inside MealDisplay</div>
+
+      <Link classname="return-to-HomePage" to="/">Return to Home Page</Link>
+
+    </div>
   )
 }
 
