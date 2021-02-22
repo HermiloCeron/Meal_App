@@ -6,12 +6,12 @@ const SearchResults = (props) => {
   return (
       <div>
           { props.mealResults.map(meals => (
-              <div className='grid-list' key={meals.idMeal}>
+              <div className='grid-list' key={meals.idMeal} onClick={(e) => {props.selectMealById(e, meals.idMeal)}}>
                 <div className='image-text-wrapper'>
-                  <Link to={`/results/${meals.idMeal}`}>
+                  {/* <Link to={`/results/${meals.idMeal}`}> */}
                       {meals.strMealThumb && <img className='grid-image' src={meals.strMealThumb} alt='Meal' />}
                   <h4 className='image-text'>{meals.strMeal}</h4> 
-                  </Link>
+                  {/* </Link> */}
                   </div> 
                   
               </div>

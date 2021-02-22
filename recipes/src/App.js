@@ -80,7 +80,7 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
-    this.props.history.push('/results');
+    this.props.history.push('/results/' + idMeal);
   }
 
   
@@ -110,7 +110,7 @@ class App extends Component {
               "Data loading ..."
           }
           <Route path="/results" render={() => (
-            <SearchResults mealResults={this.state.mealResults}/> )} />
+            <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
       
         
           <Route path="/results/:index" render={(routerProps) => (
