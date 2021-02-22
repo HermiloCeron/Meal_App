@@ -2,14 +2,13 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 const MealDisplay=(props)=>{
-  const mealToDisplay = props.MealDisplay.find(meal => {
+  const mealToDisplay = props.selectMeal.find(meal => {
     return meal.id === props.match.params.index;
   })
   console.log(mealToDisplay);
 
   return(
-    <div>
-      <p>Inside meal display</p>
+    <div>s
          {mealToDisplay ? (
                 <div className="main">
 

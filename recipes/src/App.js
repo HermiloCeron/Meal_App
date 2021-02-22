@@ -77,6 +77,7 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
+    
   }
 
   
@@ -110,7 +111,7 @@ class App extends Component {
           <Route path="/results/:index" render={(routerProps) => (
             <MealDisplay  
               mealResults={this.state.mealResults}
-              MealDisplay={this.state.MealDisplay}
+              mealDisplay={this.state.selectMeal}
               {...routerProps}
             /> )} />
         </main>
