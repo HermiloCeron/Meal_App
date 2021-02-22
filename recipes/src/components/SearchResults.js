@@ -7,11 +7,13 @@ const SearchResults = (props) => {
       <div>
           { props.mealResults.map(meals => (
               <div className='grid-list' key={meals.idMeal}>
-  
+                <div className='image-text-wrapper'>
                   <Link to={`/results/${meals.idMeal}`}>
                       {meals.strMealThumb && <img className='grid-image' src={meals.strMealThumb} alt='Meal' />}
-                  <h2>{meals.strMeal}</h2>
+                  <h4 className='image-text'>{meals.strMeal}</h4> 
                   </Link>
+                  </div> 
+                  
               </div>
 
           )) }
