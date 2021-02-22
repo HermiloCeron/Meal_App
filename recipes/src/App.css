@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.grid-list {
+  display: inline-block;
+  height: 225px;
+  width: 225px;
+  margin: 5px;
+}
+
+.grid-image {
+  height:225px;
+  width: 225px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
