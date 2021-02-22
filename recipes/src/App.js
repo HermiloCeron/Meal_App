@@ -80,11 +80,7 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
-<<<<<<< HEAD
     this.props.history.push('/results');
-=======
-    
->>>>>>> aa87c1245a6a4a8fa900f68c104cf760cdd8516e
   }
 
   
@@ -114,20 +110,15 @@ class App extends Component {
               "Data loading ..."
           }
           <Route path="/results" render={() => (
-<<<<<<< HEAD
             <SearchResults mealResults={this.state.mealResults}/> )} />
       
-          <Route path="/results/:index" render={() => (
-            <MealDisplay mealResults={this.state.mealResults}/> )} />
-=======
-            <SearchResults /> )} />
+        
           <Route path="/results/:index" render={(routerProps) => (
             <MealDisplay  
               mealResults={this.state.mealResults}
               mealDisplay={this.state.selectMeal}
               {...routerProps}
             /> )} />
->>>>>>> aa87c1245a6a4a8fa900f68c104cf760cdd8516e
         </main>
         <footer>
           The footer...
