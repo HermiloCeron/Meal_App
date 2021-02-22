@@ -9,7 +9,8 @@ class HomePage extends Component{
       ingredient:'',
       suggestions: this.props.ingredients,
       ingredientAuxiliar:'',
-      randomMeal: {}
+      randomMeal: {},
+   
     }
   }
   handleChange=(e)=>{
@@ -34,6 +35,7 @@ class HomePage extends Component{
       randomMeal:randomMeal.data.meals[0]
     })
   }
+
   render(){
     return(
       <div>
