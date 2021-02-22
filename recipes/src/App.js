@@ -107,8 +107,12 @@ class App extends Component {
           }
           <Route path="/results" render={() => (
             <SearchResults /> )} />
-          <Route path="/results/:index" render={() => (
-            <MealDisplay /> )} />
+          <Route path="/results/:index" render={(routerProps) => (
+            <MealDisplay  
+              mealResults={this.state.mealResults}
+              MealDisplay={this.state.MealDisplay}
+              {...routerProps}
+            /> )} />
         </main>
         <footer>
           The footer...
