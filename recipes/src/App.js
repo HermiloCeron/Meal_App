@@ -63,6 +63,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   searchIngredient=async(e)=>{
     e.preventDefault();
@@ -71,6 +72,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   selectMealById=async(e,idMeal)=>{
     e.preventDefault();
@@ -78,6 +80,7 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
+    this.props.history.push('/results');
   }
 
   
