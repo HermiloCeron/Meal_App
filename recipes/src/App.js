@@ -17,7 +17,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      joke: '',
+      // joke: '',
       dataLoaded: false
     }
   }
@@ -26,10 +26,10 @@ class App extends Component {
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     //Testing weather ticker or advertisements
-    const joke = await axios.get('https://icanhazdadjoke.com', {
-    headers: {
-        Accept: 'application/json'
-    }})
+    // const joke = await axios.get('https://icanhazdadjoke.com', {
+    // headers: {
+    //     Accept: 'application/json'
+    // }})
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
@@ -99,8 +99,8 @@ class App extends Component {
         </main>
         <footer>
           The footer...
-          <h2>Dad Jokes</h2>
-        <p>{this.state.joke}</p>
+          {/* <h2>Dad Jokes</h2>
+        <p>{this.state.joke}</p> */}
         </footer>
       </div>
     );

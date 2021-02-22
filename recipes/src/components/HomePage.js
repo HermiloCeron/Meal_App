@@ -9,7 +9,7 @@ class HomePage extends Component{
       suggestions: this.props.ingredients,
       ingredientAuxiliar:'',
       randomMeal: {},
-      joke: '',
+    //   joke: '',
     }
   }
   handleChange=(e)=>{
@@ -34,18 +34,18 @@ class HomePage extends Component{
       randomMeal:randomMeal.data.meals[0]
     })
   }
-  getJoke = async () => {
-    const joke = await axios.get('https://icanhazdadjoke.com', {
-      headers: {
-          Accept: 'application/json'
-      }
+//   getJoke = async () => {
+//     const joke = await axios.get('https://icanhazdadjoke.com', {
+//       headers: {
+//           Accept: 'application/json'
+//       }
     
-    })
+//     })
   
-  this.setState({
-    joke: joke.data.joke,
-  })
-  }
+//   this.setState({
+//     joke: joke.data.joke,
+//   })
+//   }
   
   render(){
     return(
@@ -116,7 +116,7 @@ class HomePage extends Component{
         >
           Choose a random meal!
         </button>
-        <p>{this.state.joke}</p>
+        {/* <p>{this.state.joke}</p> */}
 
       </div>
     )
