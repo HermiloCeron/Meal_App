@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import { Route, Link } from 'react-router-dom';
 
 class HomePage extends Component{
   constructor(props){
@@ -45,14 +46,17 @@ class HomePage extends Component{
           <select name='category'>
             {this.props.categories.map((category,index)=>(
               <option
-                key={'category-seacrh-option-'+index}
+                key={'category-search-option-'+index}
                 value={category}
               >
                 {category}
               </option>
             ))}
           </select>
-          <input type='submit' value='Search'/>
+          <Link to={"/results"}>
+            <input type='submit' value='Search'/>
+          </Link>
+
         </form>
 
 
@@ -70,7 +74,9 @@ class HomePage extends Component{
               </option>
             ))}
           </select>
-          <input type='submit' value='Search'/>
+          <Link to={"/results"}>
+            <input type='submit' value='Search'/>
+          </Link>
         </form>
 
 
@@ -94,14 +100,17 @@ class HomePage extends Component{
               </option>
             ))}
           </select>
-          <input type='submit' value='Search'/>
+          <Link to={"/results"}>
+            <input type='submit' value='Search'/>
+          </Link>
         </form>
-
-        <button
-          onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
-        >
-          Choose a random meal!
-        </button>
+           
+          <button
+            onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
+          >             
+            Choose a random meal!
+          </button>
+          
 
       </div>
     )
