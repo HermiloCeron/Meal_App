@@ -8,16 +8,18 @@ const MealDisplay=(props)=>{
   // })
   console.log(props.mealToDisplay);
 
-  const video_id = mealToDisplay.strYoutube.split('v=')[1];
-  let ampersandPosition = video_id.indexOf('&');
+  let video_url = "";
+  let video_id = "";
+  if( mealToDisplay.strYoutube.length > 0)  { video_id = mealToDisplay.strYoutube.split('v=')[1];  
+  let ampersandPosition = video_id.indexOf('&'); 
   if(ampersandPosition != -1) {
       video_id = video_id.substring(0, ampersandPosition);
     };
+    
+  video_url = "https://www.youtube.com/embed/"+video_id} else { 
 
-  const video_url = "https://www.youtube.com/embed/"+video_id;
-
-  //const video_url = "https://www.youtube.com/embed/ZWcRmoLqhkc"
- 
+  video_url = "https://www.youtube.com/embed/ZWcRmoLqhkc"}
+    console.log(video_url);
   
   
 
