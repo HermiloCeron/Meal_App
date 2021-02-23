@@ -83,3 +83,19 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.image-text-wrapper {
+  position: relative;
+  max-width: 0 auto;
+  margin-bottom: 20px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #E8E8E9;
+  width: 100%;
+  padding: 20px;
+}
