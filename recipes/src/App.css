@@ -27,15 +27,25 @@
 .App-link {
   color: #61dafb;
 }
+.image-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 5%;
+  bottom: 0;
+  color:lightgreen;
+  max-width: 100%;
+}
 .image-text-wrapper {
   position: relative;
+
 }
 
-/* .image-text-wrapper img {
+.image-text-wrapper img {
   width: 225px;
   height: 225px;
   object-fit: cover;
-} */
+}
 
 .grid-list {
   display: inline-block;

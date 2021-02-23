@@ -76,9 +76,9 @@ class HomePage extends Component{
               </option>
             ))}
           </select>
-          <Link to={"/results"}>
+          {/* <Link to={"/results"}> */}
             <input type='submit' value='Search'/>
-          </Link>
+          {/* </Link> */}
         </form>
 
 
@@ -102,9 +102,9 @@ class HomePage extends Component{
               </option>
             ))}
           </select>
-          <Link to={"/results"}>
+          {/* <Link to={"/results"}> */}
             <input type='submit' value='Search'/>
-          </Link>
+          {/* </Link> */}
         </form>
            
           <button
