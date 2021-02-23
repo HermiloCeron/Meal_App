@@ -26,14 +26,30 @@
 
 .App-link {
   color: #61dafb;
+
 }
+body {
+  background-color: #0E3013;
+  color: white;
+
+  
+}
+
+.div-header {
+  background-color: #E8E8E9;
+  color: #0E3013;
+  border: black,
+}
+
 .image-text {
   position: absolute;
   top: 0;
   right: 0;
   left: 5%;
   bottom: 0;
-  color:lime;
+  color:white;
+  
+  
   max-width: 100%;
 }
 .image-text-wrapper {

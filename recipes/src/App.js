@@ -45,8 +45,7 @@ class App extends Component {
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      // joke: joke.data.joke,
-      quote: title.content,
+      joke: joke.data.joke,
       dataLoaded: true
     })
   }
