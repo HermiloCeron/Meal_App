@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
@@ -33,9 +33,9 @@ class App extends Component {
     
     })
   
-  this.setState({
-    joke: joke.data.joke,
-  })
+  // this.setState({
+  //   joke: joke.data.joke,
+  // })
 
         
 
@@ -43,7 +43,7 @@ class App extends Component {
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      
+      joke: joke.data.joke,
       dataLoaded: true
     })
   }
@@ -54,6 +54,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   searchArea=async(e)=>{
     e.preventDefault();
@@ -62,6 +63,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   searchIngredient=async(e)=>{
     e.preventDefault();
@@ -70,6 +72,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   selectMealById=async(e,idMeal)=>{
     e.preventDefault();
@@ -77,7 +80,7 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
-    
+    this.props.history.push('/results/' + idMeal);
   }
 
   
@@ -107,7 +110,9 @@ class App extends Component {
               "Data loading ..."
           }
           <Route path="/results" render={() => (
-            <SearchResults /> )} />
+            <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
+      
+        
           <Route path="/results/:index" render={(routerProps) => (
             <MealDisplay  
               mealResults={this.state.mealResults}
@@ -126,4 +131,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter (App);
