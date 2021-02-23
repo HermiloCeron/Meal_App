@@ -7,6 +7,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
 import MealDisplay from './components/MealDisplay';
+import { getByTitle } from '@testing-library/react';
 
 class App extends Component {
   constructor(props){
@@ -26,6 +27,7 @@ class App extends Component {
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     //Testing weather ticker, jokes, or advertisements
+    // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
     const joke = await axios.get('https://icanhazdadjoke.com', {
       headers: {
           Accept: 'application/json'
@@ -122,8 +124,9 @@ class App extends Component {
         </main>
         <footer>
           The footer...
-          <h2>Dad Jokes</h2>
+          <h5>Dad Jokes</h5>
         <p>{this.state.joke}</p>
+        {/* <p>{quote.data.content}</p> */}
 
         
         </footer>
