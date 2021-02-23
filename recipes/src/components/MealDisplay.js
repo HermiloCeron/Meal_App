@@ -26,16 +26,16 @@ const MealDisplay=(props)=>{
   return(
     <div>
          {props.mealToDisplay ? (
-                <div className="main">
+                <div className="md-main">
 
-                    <div className="recipe-wrapper">
-                        <div className="image-text-wrapper">
+                    <div className="md-recipe-wrapper">
+                        <div className="md-image-text-wrapper">
                             <img src={mealToDisplay.strMealThumb} alt="A dish"/>
-                            <h1 className="image-text">{mealToDisplay.strMeal}</h1>
+                            <h1 className="md-image-text">{mealToDisplay.strMeal}</h1>
                         </div>
                     </div>
 
-                    <div className="ingredient-display">
+                    <div className="md-ingredient-display">
                       <h3>Ingredients and Measurements</h3>
                       <ol>
                         {mealToDisplay.strIngredient1.length > 0 
@@ -83,26 +83,35 @@ const MealDisplay=(props)=>{
                         {mealToDisplay.strIngredient15.length > 0 
                         ? (<li>{mealToDisplay.strIngredient15}, {mealToDisplay.strMeasure15}</li>)
                         : null }
-                        {mealToDisplay.strIngredient16.length > 0 
-                        ? (<li>{mealToDisplay.strIngredient16}, {mealToDisplay.strMeasure16}</li>)
-                        : null }
-                        {mealToDisplay.strIngredient17.length > 0 
+                        {mealToDisplay.strIngredient15 != null} 
+                        ? {mealToDisplay.strIngredient15.length > 0
                         ? (<li>{mealToDisplay.strIngredient17}, {mealToDisplay.strMeasure17}</li>)
                         : null }
-                        {mealToDisplay.strIngredient18.length > 0 
+                         {mealToDisplay.strIngredient16 != null} 
+                        ? {mealToDisplay.strIngredient16.length > 0
+                        ? (<li>{mealToDisplay.strIngredient16}, {mealToDisplay.strMeasure16}</li>)
+                        : null }
+                        {mealToDisplay.strIngredient17 != null} 
+                        ? {mealToDisplay.strIngredient17.length > 0
+                        ? (<li>{mealToDisplay.strIngredient17}, {mealToDisplay.strMeasure17}</li>)
+                        : null }
+                       {mealToDisplay.strIngredient18 != null} 
                         ? (<li>{mealToDisplay.strIngredient18}, {mealToDisplay.strMeasure18}</li>)
                         : null }
-                        {mealToDisplay.strIngredient19.length > 0 
+                        {mealToDisplay.strIngredient19 != null} 
+                        ? {mealToDisplay.strIngredient19.length > 0
                         ? (<li>{mealToDisplay.strIngredient19}, {mealToDisplay.strMeasure19}</li>)
                         : null }
-                        {mealToDisplay.strIngredient20.length > 0 
+                        
+                        {mealToDisplay.strIngredient20 != null} 
+                        ? {mealToDisplay.strIngredient20.length > 0
                         ? (<li>{mealToDisplay.strIngredient20}, {mealToDisplay.strMeasure20}</li>)
                         : null }
                         
                       </ol>
                     </div>
 
-                    <div className="recipe-instructions">
+                    <div className="md-recipe-instructions">
                       <h3>Instructions</h3>
                       <p>{mealToDisplay.strInstructions}</p>
                     </div>
