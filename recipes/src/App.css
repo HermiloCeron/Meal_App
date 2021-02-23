@@ -61,6 +61,7 @@
 .image-text-wrapper {
   position: relative;
   max-width: 0 auto;
+  margin-bottom: 20px;
 }
 
 .image-text {

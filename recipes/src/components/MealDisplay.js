@@ -15,6 +15,10 @@ const MealDisplay=(props)=>{
     };
 
   const video_url = "https://www.youtube.com/embed/"+video_id;
+
+  //const video_url = "https://www.youtube.com/embed/ZWcRmoLqhkc"
+ 
+  
   
 
   return(
@@ -29,7 +33,7 @@ const MealDisplay=(props)=>{
                         </div>
                     </div>
 
-                    <div>
+                    <div className="ingredient-display">
                       <h3>Ingredients and Measurements</h3>
                       <ol>
                         {mealToDisplay.strIngredient1.length > 0 
@@ -96,7 +100,7 @@ const MealDisplay=(props)=>{
                       </ol>
                     </div>
 
-                    <div>
+                    <div className="recipe-instructions">
                       <h3>Instructions</h3>
                       <p>{mealToDisplay.strInstructions}</p>
                     </div>
