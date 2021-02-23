@@ -18,7 +18,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      quote: '',
+      joke: '',
       dataLoaded: false
     }
   }
@@ -27,13 +27,13 @@ class App extends Component {
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     //Testing weather ticker, jokes, or advertisements
-    const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
-    // const joke = await axios.get('https://icanhazdadjoke.com', {
-    //   headers: {
-    //       Accept: 'application/json'
-    //   }
+    // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
+    const joke = await axios.get('https://icanhazdadjoke.com', {
+      headers: {
+          Accept: 'application/json'
+      }
 
-    // })
+    })
 
   // this.setState({
   //   joke: joke.data.joke,
@@ -126,8 +126,8 @@ class App extends Component {
         <footer>
           The footer...
           <h5>Dad Jokes</h5>
-        {/* <p>{this.state.joke}</p> */}
-        <p>{quote.data.content}</p>
+        <p>{this.state.joke}</p>
+        {/* <p>{quote.data.content}</p> */}
 
         
         </footer>
