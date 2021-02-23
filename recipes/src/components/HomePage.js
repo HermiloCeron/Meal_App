@@ -10,7 +10,7 @@ class HomePage extends Component{
       suggestions: this.props.ingredients,
       ingredientAuxiliar:'',
       randomMeal: {},
-   
+
     }
   }
   handleChange=(e)=>{
@@ -106,13 +106,13 @@ class HomePage extends Component{
             <input type='submit' value='Search'/>
           </Link>
         </form>
-           
+
           <button
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
-          >             
+          >
             Choose a random meal!
           </button>
-          
+
 
       </div>
     )

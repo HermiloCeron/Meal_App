@@ -7,6 +7,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
 import MealDisplay from './components/MealDisplay';
+import SideImage from './components/SideImage';
 
 class App extends Component {
   constructor(props){
@@ -18,13 +19,22 @@ class App extends Component {
       ingredients: [],
       categories: [],
       joke: '',
-      dataLoaded: false
+      dataLoaded: false,
+      randomMealArray:[]
     }
   }
   async componentDidMount(){
     const ingredients=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
+    // Random meals for SideImage
+    const randomMealArray=[];
+    let randomMeal={}
+    for(let i=0;i<=5;i++){
+      randomMeal=await axios.get("https://www.themealdb.com/api/json/v1/1/random.php");
+      randomMealArray.push(randomMeal.data.meals[0]);
+    }
+    console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
     const joke = await axios.get('https://icanhazdadjoke.com', {
       headers: {
@@ -44,7 +54,8 @@ class App extends Component {
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
       joke: joke.data.joke,
-      dataLoaded: true
+      dataLoaded: true,
+      randomMealArray: randomMealArray
     })
   }
   searchCategory=async(e)=>{
@@ -120,12 +131,18 @@ class App extends Component {
               {...routerProps}
             /> )} />
         </main>
+        <aside>
+          <SideImage
+            randomMealArray={this.state.randomMealArray}
+            selectMealById={this.selectMealById}
+          />
+        </aside>
         <footer>
           The footer...
           <h2>Dad Jokes</h2>
         <p>{this.state.joke}</p>
 
-        
+
         </footer>
       </div>
     );
