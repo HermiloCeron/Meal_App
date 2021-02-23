@@ -38,7 +38,8 @@ body {
 .div-header {
   background-color: #E8E8E9;
   color: #0E3013;
-  border: black,
+  border: black;
+  
 }
 
 .image-text {
@@ -48,12 +49,14 @@ body {
   left: 5%;
   bottom: 0;
   color:white;
-  
-  
+  padding: 20px;
   max-width: 100%;
 }
 .image-text-wrapper {
   position: relative;
+  max-width: 0 auto;
+  margin-bottom: 20px;
+
 
 }
 
