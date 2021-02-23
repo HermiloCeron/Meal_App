@@ -7,7 +7,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
 import MealDisplay from './components/MealDisplay';
-import { getByTitle } from '@testing-library/react';
+
 
 class App extends Component {
   constructor(props){
