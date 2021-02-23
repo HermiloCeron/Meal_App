@@ -30,14 +30,21 @@ class App extends Component {
       headers: {
           Accept: 'application/json'
       }
-    
+
     })
+<<<<<<< HEAD
   
   // this.setState({
   //   joke: joke.data.joke,
   // })
+=======
+>>>>>>> master
 
-        
+  // this.setState({
+  //   joke: joke.data.joke,
+  // })
+
+
 
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
@@ -83,7 +90,7 @@ class App extends Component {
     this.props.history.push('/results/' + idMeal);
   }
 
-  
+
   render(){
     console.log('meal results:',this.state.mealResults)
     console.log('random meal:',this.state.selectMeal)
@@ -104,19 +111,26 @@ class App extends Component {
                   searchArea={this.searchArea}
                   searchIngredient={this.searchIngredient}
                   selectMealById={this.selectMealById}
-                /> )} 
+                /> )}
               />
             :
               "Data loading ..."
           }
+<<<<<<< HEAD
           <Route path="/results" render={() => (
             <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
       
         
+=======
+          <Route exact path="/results" render={() => (
+            <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
+
+
+>>>>>>> master
           <Route path="/results/:index" render={(routerProps) => (
-            <MealDisplay  
+            <MealDisplay
               mealResults={this.state.mealResults}
-              mealDisplay={this.state.selectMeal}
+              mealToDisplay={this.state.selectMeal}
               {...routerProps}
             /> )} />
         </main>
@@ -125,6 +139,7 @@ class App extends Component {
           <h2>Dad Jokes</h2>
         <p>{this.state.joke}</p>
 
+        
         </footer>
       </div>
     );
