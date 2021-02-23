@@ -2,14 +2,19 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 const MealDisplay=(props)=>{
-  const mealToDisplay = props.selectMeal.find(meal => {
-    return meal.id === props.match.params.index;
-  })
-  console.log(mealToDisplay);
+  const mealToDisplay =props.mealToDisplay
+  // const mealToDisplay = props.selectMeal.find(meal => {
+  //   return meal.id === props.match.params.index;
+  // })
+  console.log(props.mealToDisplay);
 
   return(
     <div>
+<<<<<<< HEAD
          {mealToDisplay ? (
+=======
+         {props.mealToDisplay ? (
+>>>>>>> 001de2c6b6c7a2662b3bcc772c638d8eb44fe953
                 <div className="main">
 
                     <div className="recipe-wrapper">
@@ -50,17 +55,17 @@ const MealDisplay=(props)=>{
                         <form  action={mealToDisplay.strYoutube}>
                             <input className="youtube-link" type="submit" value="View video" />
                         </form>
-                    </div>                   
+                    </div>
 
                     <div className="return-wrapper">
                       <Link className="return-to-HomePage" to="/">Return to Home Page</Link>
                     </div>
 
                 </div>
-             
-            ) : 
+
+            ) :
             <p>Loading recipe...</p>
-            }   
+            }
     </div>
   )
 }

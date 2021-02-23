@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
@@ -30,20 +30,20 @@ class App extends Component {
       headers: {
           Accept: 'application/json'
       }
-    
-    })
-  
-  this.setState({
-    joke: joke.data.joke,
-  })
 
-        
+    })
+
+  // this.setState({
+  //   joke: joke.data.joke,
+  // })
+
+
 
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      
+      joke: joke.data.joke,
       dataLoaded: true
     })
   }
@@ -54,6 +54,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   searchArea=async(e)=>{
     e.preventDefault();
@@ -62,6 +63,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   searchIngredient=async(e)=>{
     e.preventDefault();
@@ -70,6 +72,7 @@ class App extends Component {
     this.setState({
       mealResults: mealResults.data.meals
     })
+    this.props.history.push('/results');
   }
   selectMealById=async(e,idMeal)=>{
     e.preventDefault();
@@ -77,10 +80,10 @@ class App extends Component {
     this.setState({
       selectMeal: meal.data.meals[0]
     })
-    
+    this.props.history.push('/results/' + idMeal);
   }
 
-  
+
   render(){
     console.log('meal results:',this.state.mealResults)
     console.log('random meal:',this.state.selectMeal)
@@ -101,17 +104,19 @@ class App extends Component {
                   searchArea={this.searchArea}
                   searchIngredient={this.searchIngredient}
                   selectMealById={this.selectMealById}
-                /> )} 
+                /> )}
               />
             :
               "Data loading ..."
           }
-          <Route path="/results" render={() => (
-            <SearchResults /> )} />
+          <Route exact path="/results" render={() => (
+            <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
+
+
           <Route path="/results/:index" render={(routerProps) => (
-            <MealDisplay  
+            <MealDisplay
               mealResults={this.state.mealResults}
-              mealDisplay={this.state.selectMeal}
+              mealToDisplay={this.state.selectMeal}
               {...routerProps}
             /> )} />
         </main>
@@ -120,10 +125,11 @@ class App extends Component {
           <h2>Dad Jokes</h2>
         <p>{this.state.joke}</p>
 
+        
         </footer>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter (App);
