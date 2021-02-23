@@ -32,13 +32,6 @@ class App extends Component {
       }
 
     })
-<<<<<<< HEAD
-  
-  // this.setState({
-  //   joke: joke.data.joke,
-  // })
-=======
->>>>>>> master
 
   // this.setState({
   //   joke: joke.data.joke,
@@ -116,17 +109,10 @@ class App extends Component {
             :
               "Data loading ..."
           }
-<<<<<<< HEAD
-          <Route path="/results" render={() => (
-            <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
-      
-        
-=======
           <Route exact path="/results" render={() => (
             <SearchResults mealResults={this.state.mealResults} selectMealById={this.selectMealById}/> )} />
 
 
->>>>>>> master
           <Route path="/results/:index" render={(routerProps) => (
             <MealDisplay
               mealResults={this.state.mealResults}
