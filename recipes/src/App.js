@@ -7,6 +7,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import SearchResults from './components/SearchResults';
 import MealDisplay from './components/MealDisplay';
+import { getByTitle } from '@testing-library/react';
 
 class App extends Component {
   constructor(props){
@@ -17,7 +18,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      joke: '',
+      quote: '',
       dataLoaded: false
     }
   }
@@ -26,12 +27,13 @@ class App extends Component {
     const categories=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?c=list");
     const areas=await axios.get("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
     //Testing weather ticker, jokes, or advertisements
-    const joke = await axios.get('https://icanhazdadjoke.com', {
-      headers: {
-          Accept: 'application/json'
-      }
+    const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
+    // const joke = await axios.get('https://icanhazdadjoke.com', {
+    //   headers: {
+    //       Accept: 'application/json'
+    //   }
 
-    })
+    // })
 
   // this.setState({
   //   joke: joke.data.joke,
@@ -43,7 +45,8 @@ class App extends Component {
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      joke: joke.data.joke,
+      // joke: joke.data.joke,
+      quote: title.content,
       dataLoaded: true
     })
   }
@@ -122,8 +125,9 @@ class App extends Component {
         </main>
         <footer>
           The footer...
-          <h2>Dad Jokes</h2>
-        <p>{this.state.joke}</p>
+          <h5>Dad Jokes</h5>
+        {/* <p>{this.state.joke}</p> */}
+        <p>{quote.data.content}</p>
 
         
         </footer>
