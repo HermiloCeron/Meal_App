@@ -26,16 +26,42 @@
 
 .App-link {
   color: #61dafb;
+
+}
+body {
+  background-color: #0E3013;
+  color: white;
+
+  
+}
+
+.div-header {
+  background-color: #E8E8E9;
+  color: #0E3013;
+  border: black,
+}
+
+.image-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 5%;
+  bottom: 0;
+  color:white;
+  
+  
+  max-width: 100%;
 }
 .image-text-wrapper {
   position: relative;
+
 }
 
-/* .image-text-wrapper img {
+.image-text-wrapper img {
   width: 225px;
   height: 225px;
   object-fit: cover;
-} */
+}
 
 .grid-list {
   display: inline-block;
@@ -56,4 +82,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.image-text-wrapper {
+  position: relative;
+  max-width: 0 auto;
+  margin-bottom: 20px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #E8E8E9;
+  width: 100%;
+  padding: 20px;
 }

@@ -36,6 +36,7 @@ class App extends Component {
     }
     console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
+    // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
     const joke = await axios.get('https://icanhazdadjoke.com', {
       headers: {
           Accept: 'application/json'
@@ -139,8 +140,9 @@ class App extends Component {
         </aside>
         <footer>
           The footer...
-          <h2>Dad Jokes</h2>
+          <h5>Dad Jokes</h5>
         <p>{this.state.joke}</p>
+        {/* <p>{quote.data.content}</p> */}
 
 
         </footer>
