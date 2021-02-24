@@ -88,10 +88,11 @@ class HomePage extends Component{
         <div className='div-header'>Search By Ingredient</div>
 
         <form onSubmit={(e)=>{this.props.searchIngredient(e)}} >
-          <label htmlFor='ingredient'> </label>
+          <label htmlFor='ingredient'></label>
           <input
             type='text'
             name='ingredientAuxiliar'
+            placeholder='Enter an ingredient'
             value={this.state.ingredientAuxiliar}
             onChange={this.handleChange}
           />
