@@ -39,23 +39,29 @@ body {
   background-color: #E8E8E9;
   color: #0E3013;
   border: black;
+  border-width: 2px;
+  max-width: 100%;
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  
   
 }
 
 .image-text {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 5%;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.5);
   bottom: 0;
-  color:white;
-  padding: 20px;
+  color: #E8E8E9;
   max-width: 100%;
 }
 .image-text-wrapper {
   position: relative;
   max-width: 0 auto;
   margin-bottom: 20px;
+  margin-top: 20px;
 
 
 }

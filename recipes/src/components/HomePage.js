@@ -61,7 +61,8 @@ class HomePage extends Component{
 
         </form>
 
-
+        <br></br>
+          
         <div className='div-header'>Search by area</div>
 
         <form onSubmit={(e)=>{this.props.searchArea(e)}} >
@@ -80,7 +81,7 @@ class HomePage extends Component{
             <input type='submit' value='Search'/>
           {/* </Link> */}
         </form>
-
+              <br></br>
 
         <div className='div-header'>Search by ingredient</div>
 
@@ -101,12 +102,13 @@ class HomePage extends Component{
                 {ingredient}
               </option>
             ))}
+           
           </select>
           {/* <Link to={"/results"}> */}
             <input type='submit' value='Search'/>
           {/* </Link> */}
         </form>
-
+        <br></br>
           <button className='button'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >
