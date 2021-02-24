@@ -78,7 +78,7 @@ class HomePage extends Component{
             ))}
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
         </form>
              
