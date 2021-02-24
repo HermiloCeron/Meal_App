@@ -39,9 +39,9 @@ class HomePage extends Component{
   render(){
     return(
       <div>
-        <div>Inside HomePage</div>
+        <div>Find recipes from all over the world!</div>
 
-        <div className='div-header'>Search by category</div>
+        <div className='div-header'>Search By Category</div>
 
         <form onSubmit={(e)=>{this.props.searchCategory(e)}} >
           <label htmlFor='category'> </label>
@@ -61,8 +61,9 @@ class HomePage extends Component{
 
         </form>
 
-
-        <div className='div-header'>Search by area</div>
+       
+          
+        <div className='div-header'>Search By Geographic Area</div>
 
         <form onSubmit={(e)=>{this.props.searchArea(e)}} >
           <label htmlFor='area'> </label>
@@ -77,12 +78,12 @@ class HomePage extends Component{
             ))}
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
         </form>
+             
 
-
-        <div className='div-header'>Search by ingredient</div>
+        <div className='div-header'>Search By Ingredient</div>
 
         <form onSubmit={(e)=>{this.props.searchIngredient(e)}} >
           <label htmlFor='ingredient'> </label>
@@ -101,17 +102,19 @@ class HomePage extends Component{
                 {ingredient}
               </option>
             ))}
+           
           </select>
           {/* <Link to={"/results"}> */}
             <input type='submit' value='Search'/>
           {/* </Link> */}
         </form>
-
-          <button className='button'
+        <br></br>
+       
+          <button1 className='button'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >
             Choose a random meal!
-          </button>
+          </button1>
 
 
       </div>
