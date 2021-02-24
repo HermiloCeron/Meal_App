@@ -10,7 +10,7 @@ const SearchResults = (props) => {
                 <div className='image-text-wrapper'>
                   {/* <Link to={`/results/${meals.idMeal}`}> */}
                       {meals.strMealThumb && <img className='grid-image' src={meals.strMealThumb} alt='Meal' />}
-                  <h4 className='image-text'>{meals.strMeal}</h4> 
+                  <h6 className='image-text'>{meals.strMeal}</h6> 
                   {/* </Link> */}
                   </div> 
                   

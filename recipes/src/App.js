@@ -102,7 +102,10 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          The header...
+          <h1>International Cookbook</h1>
+          <div className="return-wrapper">
+                      <Link className="return-to-HomePage" to="/">Return to Home Page</Link>
+                    </div>
         </header>
         <main>
           {this.state.dataLoaded
@@ -132,6 +135,8 @@ class App extends Component {
               {...routerProps}
             /> )} />
         </main>
+        <br></br>
+        <br></br>
         <aside>
           <SideImage
             randomMealArray={this.state.randomMealArray}
