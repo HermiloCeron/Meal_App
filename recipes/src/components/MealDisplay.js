@@ -37,7 +37,7 @@ const MealDisplay=(props)=>{
 
                     <div className="md-ingredient-display">
                       <h3 className="md-ingredient-header">Ingredients and Measurements</h3>
-                      <ol>       
+                      <ol className="md-ingredient-ol">       
                         {mealToDisplay.strIngredient1 === null 
                         ? null 
                         : mealToDisplay.strIngredient1.length > 0 
