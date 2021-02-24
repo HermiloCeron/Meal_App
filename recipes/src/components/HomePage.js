@@ -39,7 +39,7 @@ class HomePage extends Component{
   render(){
     return(
       <div>
-        <div>Inside HomePage</div>
+        <div>Find recipes from all over the world!</div>
 
         <div className='div-header'>Search By Category</div>
 
@@ -61,9 +61,9 @@ class HomePage extends Component{
 
         </form>
 
-        <br></br>
+       
           
-        <div className='div-header'>Search By Area</div>
+        <div className='div-header'>Search By Geographic Area</div>
 
         <form onSubmit={(e)=>{this.props.searchArea(e)}} >
           <label htmlFor='area'> </label>
@@ -81,7 +81,7 @@ class HomePage extends Component{
             <input type='submit' value='Search'/>
           {/* </Link> */}
         </form>
-              <br></br>
+             
 
         <div className='div-header'>Search By Ingredient</div>
 
@@ -109,6 +109,7 @@ class HomePage extends Component{
           {/* </Link> */}
         </form>
         <br></br>
+       
           <button1 className='button'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >

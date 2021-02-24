@@ -135,6 +135,8 @@ class App extends Component {
               {...routerProps}
             /> )} />
         </main>
+        <br></br>
+        <br></br>
         <aside>
           <SideImage
             randomMealArray={this.state.randomMealArray}

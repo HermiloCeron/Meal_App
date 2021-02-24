@@ -40,7 +40,7 @@ header {
 }
 
 footer {
-  background-color: #656665;
+  background-color: #040F0F;
   color: #E8E8E9;
 }
 
@@ -49,7 +49,7 @@ form {
   margin-right: 200px;
   margin-left: 200px;
   display: flex;
-  padding: 2px;
+  padding: 20px;
 }
 
 select {
@@ -59,11 +59,12 @@ select {
 
 button1 {
   background-color: #289944;
-  color: #0E3013;
+  color: #E8E8E9;
   border: 3px;
   border-style: solid;
+  border-radius: 50%;
   border-color: #E8E8E9;
-  padding: 2px;
+  padding: 10px;
 }
 .div-header {
   background-color: #656665;
