@@ -12,11 +12,17 @@
 
 ## Description
 
+* MealDB API
+
+<img src="https://www.themealdb.com/images/logo-small.png" alt="mealDB logo" width="300"/>
+
+* Quotable API
+
 ## Project objective
 
 ## Sample
 
-## MVP
+## MVP / Stretch Goals
 
 ### Basic MVP
 
@@ -43,5 +49,15 @@
 * GitHub
 
 <img src="https://1000marcas.net/wp-content/uploads/2020/02/GitHub-Logo-600x338.jpg" alt="GitHub logo" width="300"/>
+
+* Bootstrap
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyS9VY5uFYyc1xVD9-kmMnjR9DpsbuVpr3Xw&usqp=CAU" alt="GitHub logo" width="300"/>
+
+* YouTube
+
+<img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="GitHub logo" width="300"/>
+
+
 
 ## Project takeaways
