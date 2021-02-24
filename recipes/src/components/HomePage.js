@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import { Route, Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+import { pulse } from 'react-animations';
 
 class HomePage extends Component{
   constructor(props){
@@ -56,7 +58,7 @@ class HomePage extends Component{
             ))}
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
 
         </form>
@@ -86,10 +88,11 @@ class HomePage extends Component{
         <div className='div-header'>Search By Ingredient</div>
 
         <form onSubmit={(e)=>{this.props.searchIngredient(e)}} >
-          <label htmlFor='ingredient'> </label>
+          <label htmlFor='ingredient'></label>
           <input
             type='text'
             name='ingredientAuxiliar'
+            placeholder='Enter ingredient'
             value={this.state.ingredientAuxiliar}
             onChange={this.handleChange}
           />
@@ -105,12 +108,12 @@ class HomePage extends Component{
            
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
         </form>
         <br></br>
        
-          <button1 className='button'
+          <button1 className='button1'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >
             Choose a random meal!
