@@ -109,11 +109,11 @@ class HomePage extends Component{
           {/* </Link> */}
         </form>
         <br></br>
-          <button className='button'
+          <button1 className='button'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >
             Choose a random meal!
-          </button>
+          </button1>
 
 
       </div>

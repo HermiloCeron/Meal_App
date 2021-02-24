@@ -36,27 +36,35 @@ body {
 
 header {
   background-color: #040F0F;
+  color: #E8E8E9;
 }
 
 footer {
   background-color: #656665;
+  color: #E8E8E9;
 }
 
 form {
-  background-color: #289944;
+  background-color: #0E3013;
   margin-right: 200px;
   margin-left: 200px;
-  border: #040F0F;
-  border-style: solid;
-  border-width: 5px;
   display: flex;
   padding: 2px;
 }
 
 select {
-  background-color: #E8E8E9
+  background-color: #E8E8E9;
+  color: #0E3013;
 }
 
+button1 {
+  background-color: #289944;
+  color: #0E3013;
+  border: 3px;
+  border-style: solid;
+  border-color: #E8E8E9;
+  padding: 2px;
+}
 .div-header {
   background-color: #656665;
   color: #E8E8E9;
