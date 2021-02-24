@@ -93,8 +93,9 @@ An app where you can find recipes based on simple search criteria.
 ## Links
 
 * [GitHub repository](https://github.com/mgboiler2020/Meal_App/tree/master/recipes)
+
 * [Surge deployment]()
 
 ## References
-meal
+
 * [Reference description](Link)
