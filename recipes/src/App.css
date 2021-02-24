@@ -39,19 +39,34 @@ header {
 }
 
 footer {
-  background-color:
+  background-color: #656665;
+}
+
+form {
+  background-color: #289944;
+  margin-right: 200px;
+  margin-left: 200px;
+  border: #040F0F;
+  border-style: solid;
+  border-width: 5px;
+  display: flex;
+  padding: 2px;
+}
+
+select {
+  background-color: #E8E8E9
 }
 
 .div-header {
-  background-color: #289944;
-  color: #0E3013;
+  background-color: #656665;
+  color: #E8E8E9;
   border: #040F0F;
   border-style: solid;
   border-width: 5px;
   max-width: 100%;
   text-align: center;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-right: 5px;
+  margin-left: 5px;
   
   
 }

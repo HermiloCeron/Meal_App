@@ -41,7 +41,7 @@ class HomePage extends Component{
       <div>
         <div>Inside HomePage</div>
 
-        <div className='div-header'>Search by category</div>
+        <div className='div-header'>Search By Category</div>
 
         <form onSubmit={(e)=>{this.props.searchCategory(e)}} >
           <label htmlFor='category'> </label>
@@ -63,7 +63,7 @@ class HomePage extends Component{
 
         <br></br>
           
-        <div className='div-header'>Search by area</div>
+        <div className='div-header'>Search By Area</div>
 
         <form onSubmit={(e)=>{this.props.searchArea(e)}} >
           <label htmlFor='area'> </label>
@@ -83,7 +83,7 @@ class HomePage extends Component{
         </form>
               <br></br>
 
-        <div className='div-header'>Search by ingredient</div>
+        <div className='div-header'>Search By Ingredient</div>
 
         <form onSubmit={(e)=>{this.props.searchIngredient(e)}} >
           <label htmlFor='ingredient'> </label>
