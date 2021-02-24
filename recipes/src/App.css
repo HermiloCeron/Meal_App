@@ -103,6 +103,7 @@ button1 {
   object-fit: cover;
 }
 
+
 .grid-list {
   display: inline-block;
   height: 225px;
@@ -134,6 +135,12 @@ button1 {
 
 .md-image-cover {
   object-fit: cover;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 }
 
 .md-image-text {
@@ -144,6 +151,7 @@ button1 {
   color: #E8E8E9;
   width: 100%;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .md-ingredient-display {
