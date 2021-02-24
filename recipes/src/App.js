@@ -102,7 +102,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>Food Finder</h1>
+          <h1>International CookBook</h1>
           <div className="return-wrapper">
                       <Link className="return-to-HomePage" to="/">Return to Home Page</Link>
                     </div>
