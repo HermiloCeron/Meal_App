@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import { Route, Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+import { pulse } from 'react-animations';
 
 class HomePage extends Component{
   constructor(props){
