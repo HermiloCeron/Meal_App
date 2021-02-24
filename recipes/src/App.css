@@ -125,13 +125,13 @@ button1 {
   }
 }
 
-.image-text-wrapper {
+.md-image-text-wrapper {
   position: relative;
   max-width: 0 auto;
   margin-bottom: 20px;
 }
 
-.image-text {
+.md-image-text {
   position: absolute;
   bottom: 0;
   background: rgb(0, 0, 0);
