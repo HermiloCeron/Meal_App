@@ -57,7 +57,7 @@ select {
   color: #0E3013;
 }
 
-button1 {
+.button1 {
   background-color: #289944;
   color: #E8E8E9;
   border: 3px;
@@ -65,7 +65,35 @@ button1 {
   border-radius: 50%;
   border-color: #E8E8E9;
   padding: 10px;
+  cursor: pointer;
 }
+
+.button1:hover {background-color: #3e8e41}
+
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
+
+.search {
+  background-color: #289944;
+  color: #E8E8E9;
+  border: 3px;
+  border-style: solid;
+  border-radius: 10%;
+  border-color: #E8E8E9;
+  padding: 2px;
+  cursor: pointer;
+}
+.search:hover {background-color: #3e8e41}
+
+.search:active {
+  background-color: #3e8e41;
+  box-shadow: 0 10px #666;
+  transform: translateY(4px);
+}
+
 .div-header {
   background-color: #656665;
   color: #E8E8E9;
@@ -87,6 +115,7 @@ button1 {
   bottom: 0;
   color: #E8E8E9;
   max-width: 100%;
+  max-height: fit-content;
 }
 .image-text-wrapper {
   position: relative;
