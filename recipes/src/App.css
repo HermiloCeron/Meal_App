@@ -127,8 +127,14 @@ button1 {
 
 .md-image-text-wrapper {
   position: relative;
-  max-width: 0 auto;
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.md-image-cover {
+  object-fit: cover;
 }
 
 .md-image-text {
@@ -139,4 +145,32 @@ button1 {
   color: #E8E8E9;
   width: 100%;
   padding: 20px;
+}
+
+.md-ingredient-display {
+  margin-bottom: 30px;
+}
+
+.md-ingredient-header {
+  margin-bottom: 20px;
+  color: #289944;
+}
+
+.md-recipe-instructions {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.md-recipe-instructions ol {
+  display: inline-block;
+  text-align: left;
+}
+
+.md-instructions-header {
+  margin-bottom: 20px;
+  color: #289944;
+}
+
+.video-container {
+  margin-bottom: 60px;
 }

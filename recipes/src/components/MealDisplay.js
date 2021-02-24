@@ -30,13 +30,13 @@ const MealDisplay=(props)=>{
 
                     <div className="md-recipe-wrapper">
                         <div className="md-image-text-wrapper">
-                            <img src={mealToDisplay.strMealThumb} alt="A dish"/>
+                            <img clasName="md-image-cover" src={mealToDisplay.strMealThumb} alt="A dish"/>
                             <h1 className="md-image-text">{mealToDisplay.strMeal}</h1>
                         </div>
                     </div>
 
                     <div className="md-ingredient-display">
-                      <h3>Ingredients and Measurements</h3>
+                      <h3 className="md-ingredient-header">Ingredients and Measurements</h3>
                       <ol>       
                         {mealToDisplay.strIngredient1 === null 
                         ? null 
@@ -132,11 +132,11 @@ const MealDisplay=(props)=>{
                     </div>
 
                     <div className="md-recipe-instructions">
-                      <h3>Instructions</h3>
+                      <h3 className="md-instructions-header">Instructions</h3>
                       <p>{mealToDisplay.strInstructions}</p>
                     </div>
 
-                    {<iframe width="560" height="315" 
+                    {<iframe className="video-container" width="560" height="315" 
                     src={video_url}
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
