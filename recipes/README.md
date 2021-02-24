@@ -12,6 +12,8 @@
 
 ## Description
 
+<img src="./public/wireframe.png" alt="mealDB logo" width="300"/>
+
 * MealDB API
 
 <img src="https://www.themealdb.com/images/logo-small.png" alt="mealDB logo" width="300"/>
