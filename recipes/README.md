@@ -62,7 +62,6 @@ An app where you can find recipes based on simple search criteria.
 ## Technologies used
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="React logo" height="200" />
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo" height="200"/>
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8TUvkaAZ51SEo89de6huZMjCxCEQsKhgpFg&usqp=CAU" alt="CSS logo" height="200"/>
@@ -79,7 +78,7 @@ An app where you can find recipes based on simple search criteria.
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyS9VY5uFYyc1xVD9-kmMnjR9DpsbuVpr3Xw&usqp=CAU" alt="GitHub logo" height="200"/>
 
-<img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="GitHub logo" height="200"/>
+<img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg" alt="GitHub logo" width="200"/>
 
 ## Project takeaways
 
