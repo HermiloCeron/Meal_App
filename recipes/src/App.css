@@ -105,7 +105,6 @@ select {
   margin-right: 5px;
   margin-left: 5px;
   
-  
 }
 
 .image-text {
@@ -133,6 +132,7 @@ select {
   object-fit: cover;
 }
 
+
 .grid-list {
   display: inline-block;
   height: 225px;
@@ -156,8 +156,15 @@ select {
 
 .md-image-text-wrapper {
   position: relative;
-  max-width: 0 auto;
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.md-image-cover {
+  object-fit: cover;
+  padding: 5px;
 }
 
 .md-image-text {
@@ -168,4 +175,59 @@ select {
   color: #E8E8E9;
   width: 100%;
   padding: 20px;
+  border-radius: 10px;
+}
+
+.md-ingredient-display {
+  text-align: left;
+  margin: 20px;
+  margin-bottom: 60px;
+}
+
+.md-ingredient-header {
+  margin-bottom: 40px;
+  color: #E8E8E9;
+  background-color: #289944;
+  border: 3px solid #E8E8E9;
+  border-radius: 10px;
+  width: 450px;
+  padding: 5px;
+  text-align: center;
+}
+
+.md-ingredient-ol {
+  display: inline-block;
+  text-align: left;
+}
+
+.md-ingredient-display li {
+  text-indent: 5px;
+  text-transform: capitalize;
+}
+
+.md-recipe-instructions {
+  text-align: left;
+  list-style-position: inside;
+  margin: 20px;
+  margin-bottom: 60px;
+}
+
+
+.md-instructions-header {
+  margin-bottom: 40px;
+  color: #E8E8E9;
+  background-color: #289944;
+  border: 3px solid #E8E8E9;
+  border-radius: 10px;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+}
+
+.video-container {
+  margin-bottom: 60px;
+}
+
+aside {
+  margin: 20px;
 }

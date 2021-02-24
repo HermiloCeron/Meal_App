@@ -2,11 +2,13 @@
 
 ## Table of Contents
 
-- [Description](#description)
-- [Project Objective](#project-objective)
-- [Sample](#sample)
-- [MVP / Stretch Goals](#mvp-stretch-goals)
-- [Current Features / User Stories](#current-features)
-- [Technologies used](#technologies-used)
-- [Project takeaways](#project-takeaways)
+- [Wireframes](#wireframes)
+
+
+
+## Wireframes
+<br>
+Initial woreframe for the project:
+
+![International Cookbok App](https://i.imgur.com/2zYPqU0.jpg "Wireframe")
 
