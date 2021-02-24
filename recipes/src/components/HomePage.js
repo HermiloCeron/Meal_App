@@ -92,7 +92,7 @@ class HomePage extends Component{
           <input
             type='text'
             name='ingredientAuxiliar'
-            placeholder='Enter an ingredient'
+            placeholder='Enter ingredient'
             value={this.state.ingredientAuxiliar}
             onChange={this.handleChange}
           />
