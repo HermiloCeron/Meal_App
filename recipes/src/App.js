@@ -18,7 +18,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      joke: '',
+      quote: {},
       dataLoaded: false,
       randomMealArray:[]
     }
@@ -37,24 +37,13 @@ class App extends Component {
     console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
-    const joke = await axios.get('https://icanhazdadjoke.com', {
-      headers: {
-          Accept: 'application/json'
-      }
-
-    })
-
-  // this.setState({
-  //   joke: joke.data.joke,
-  // })
-
-
-
+    const quote = await axios.get('http://api.quotable.io/random')
+    console.log("quote",quote);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      joke: joke.data.joke,
+      quote: quote.data,
       dataLoaded: true,
       randomMealArray: randomMealArray
     })
@@ -144,12 +133,8 @@ class App extends Component {
           />
         </aside>
         <footer>
-          The footer...
-          <h5>Dad Jokes</h5>
-        <p>{this.state.joke}</p>
-        {/* <p>{quote.data.content}</p> */}
-
-
+          <p>{"\""+this.state.quote.content+"\""}</p>
+          <p>{" - "+this.state.quote.author}</p>
         </footer>
       </div>
     );
