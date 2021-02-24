@@ -32,7 +32,10 @@ body {
   background-color: #0E3013;
   color: white;
 
-  
+}
+
+header {
+  background-color: #040F0F;
 }
 
 .div-header {
