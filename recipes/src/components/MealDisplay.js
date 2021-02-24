@@ -41,7 +41,7 @@ const MealDisplay=(props)=>{
                         {mealToDisplay.strIngredient1 === null 
                         ? null 
                         : mealToDisplay.strIngredient1.length > 0 
-                        ? (<li>{mealToDisplay.strIngredient1}, {mealToDisplay.strMeasure1}</li>) 
+                        ? (<li className="md-ingredient-li">{mealToDisplay.strIngredient1}, {mealToDisplay.strMeasure1}</li>) 
                         : null }
                         {mealToDisplay.strIngredient2 === null 
                         ? null 

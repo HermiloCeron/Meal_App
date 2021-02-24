@@ -77,7 +77,6 @@ button1 {
   margin-right: 5px;
   margin-left: 5px;
   
-  
 }
 
 .image-text {
@@ -148,8 +147,9 @@ button1 {
 }
 
 .md-ingredient-display {
-  margin-bottom: 40px;
   text-align: left;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 .md-ingredient-header {
@@ -168,10 +168,16 @@ button1 {
   text-align: left;
 }
 
+.md-ingredient-display li {
+  text-indent: 5px;
+  text-transform: capitalize;
+}
+
 .md-recipe-instructions {
-  margin-bottom: 60px;
   text-align: left;
   list-style-position: inside;
+  margin: 20px;
+  margin-bottom: 60px;
 }
 
 
@@ -188,4 +194,8 @@ button1 {
 
 .video-container {
   margin-bottom: 60px;
+}
+
+aside {
+  margin: 20px;
 }
