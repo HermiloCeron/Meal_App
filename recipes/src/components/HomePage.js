@@ -56,7 +56,7 @@ class HomePage extends Component{
             ))}
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
 
         </form>
@@ -105,12 +105,12 @@ class HomePage extends Component{
            
           </select>
           {/* <Link to={"/results"}> */}
-            <input type='submit' value='Search'/>
+            <input className='search' type='submit' value='Search'/>
           {/* </Link> */}
         </form>
         <br></br>
        
-          <button1 className='button'
+          <button1 className='button1'
             onClick={(e)=>this.props.selectMealById(e,this.state.randomMeal.idMeal)}
           >
             Choose a random meal!

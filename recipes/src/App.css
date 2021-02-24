@@ -57,7 +57,7 @@ select {
   color: #0E3013;
 }
 
-button1 {
+.button1 {
   background-color: #289944;
   color: #E8E8E9;
   border: 3px;
@@ -66,6 +66,17 @@ button1 {
   border-color: #E8E8E9;
   padding: 10px;
 }
+
+.search {
+  background-color: #289944;
+  color: #E8E8E9;
+  border: 3px;
+  border-style: solid;
+  border-radius: 10%;
+  border-color: #E8E8E9;
+  padding: 2px;
+}
+
 .div-header {
   background-color: #656665;
   color: #E8E8E9;
@@ -88,6 +99,7 @@ button1 {
   bottom: 0;
   color: #E8E8E9;
   max-width: 100%;
+  max-height: fit-content;
 }
 .image-text-wrapper {
   position: relative;
