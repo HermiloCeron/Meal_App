@@ -88,10 +88,46 @@ const MealDisplay=(props)=>{
                         : mealToDisplay.strIngredient10.length > 0 
                         ? (<li>{mealToDisplay.strIngredient10}, {mealToDisplay.strMeasure10}</li>) 
                         : null }
-
-                       
-                        
-                        
+                        {mealToDisplay.strIngredient11 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient11.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient11}, {mealToDisplay.strMeasure11}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient13 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient13.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient13}, {mealToDisplay.strMeasure13}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient14 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient14.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient14}, {mealToDisplay.strMeasure14}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient15 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient15.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient15}, {mealToDisplay.strMeasure15}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient16 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient16.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient16}, {mealToDisplay.strMeasure16}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient17 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient17.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient18}, {mealToDisplay.strMeasure18}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient19 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient19.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient19}, {mealToDisplay.strMeasure19}</li>) 
+                        : null }
+                        {mealToDisplay.strIngredient20 === null 
+                        ? null 
+                        : mealToDisplay.strIngredient20.length > 0 
+                        ? (<li>{mealToDisplay.strIngredient20}, {mealToDisplay.strMeasure20}</li>) 
+                        : null }                       
                       </ol>
                     </div>
 
