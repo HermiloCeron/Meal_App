@@ -104,7 +104,11 @@ select {
   text-align: center;
   margin-right: 5px;
   margin-left: 5px;
+<<<<<<< HEAD
   font-size: 35px;
+=======
+
+>>>>>>> 5967c8e3104c3597af58f76bdb454bf8c8ab49d7
 }
 
 .image-text {
@@ -230,4 +234,9 @@ select {
 
 aside {
   margin: 20px;
+  text-align: center;
+}
+
+#sponsor{
+  width:100px;
 }
