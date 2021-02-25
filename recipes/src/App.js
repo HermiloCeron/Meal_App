@@ -18,7 +18,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      quote: {},
+      beer: {},
       dataLoaded: false,
       randomMealArray:[]
     }
@@ -37,13 +37,16 @@ class App extends Component {
     console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
-    const quote = await axios.get('http://api.quotable.io/random')
-    console.log("quote",quote);
+    let beer = await axios.get('https://api.punkapi.com/v2/beers/random');
+    if(beer.data[0].image_url==null){
+      beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
+    }
+    console.log("beer",beer.data[0]);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      quote: quote.data,
+      beer: beer.data[0],
       dataLoaded: true,
       randomMealArray: randomMealArray
     })
@@ -88,6 +91,7 @@ class App extends Component {
   render(){
     console.log('meal results:',this.state.mealResults)
     console.log('random meal:',this.state.selectMeal)
+    console.log(this.state.beer)
     return (
       <div className="App">
         <header>
@@ -133,8 +137,8 @@ class App extends Component {
           />
         </aside>
         <footer>
-          <p>{"\""+this.state.quote.content+"\""}</p>
-          <p>{" - "+this.state.quote.author}</p>
+          <p> Sponsored by: </p>
+          <img src={this.state.beer.image_url} />
         </footer>
       </div>
     );
