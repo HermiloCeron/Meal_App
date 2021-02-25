@@ -18,7 +18,7 @@ class App extends Component {
       areas: [],
       ingredients: [],
       categories: [],
-      beer: {},
+      sponsor: {},
       dataLoaded: false,
       randomMealArray:[]
     }
@@ -38,16 +38,18 @@ class App extends Component {
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
     // let beer = await axios.get('https://api.punkapi.com/v2/beers/random');
-    
+    const randomId=Math.floor(Math.random()*8000)+1;
+    let sponsor=await axios.get("https://api.openbrewerydb.org/breweries/"+randomId);
+    console.log("sponsor",sponsor);
     // if(beer.data[0].image_url==null){
     //   beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
-    // } 
+    // }
     // console.log("beer",beer.data[0]);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      // beer: beer.data[0],
+      sponsor: sponsor.data,
       dataLoaded: true,
       randomMealArray: randomMealArray
     })
@@ -140,7 +142,16 @@ class App extends Component {
         <footer>
           <p> Sponsored by: </p>
           <div>
-            <img id='sponsor' src={this.state.beer.image_url} />
+            <h6> {this.state.sponsor.name} </h6>
+            {this.state.sponsor.street} <br/>
+            {this.state.sponsor.city + ' , '+
+              this.state.sponsor.state + ' , '+
+              this.state.sponsor.postal_code  + ' , '+
+              this.state.sponsor.country
+            } <br/>
+            {this.state.sponsor.phone}<br/>
+            <a href={this.state.sponsor.website_url}> {this.state.sponsor.website_url} </a>
+            <p></p>
           </div>
         </footer>
       </div>

@@ -97,6 +97,7 @@ An app where you can find recipes based on simple search criteria.
 ## Project takeaways
 
 * API advertisement issues
+* Deere blocked a few of the APIs we wanted to utilze
 * Merge several people's code experience
 * Data inconsistency in the API response (null vs "")
 
@@ -104,12 +105,12 @@ An app where you can find recipes based on simple search criteria.
 
 * [GitHub repository](https://github.com/mgboiler2020/Meal_App/tree/master/recipes)
 
-* [Surge deployment]()
+* [Surge deployment](http://moh_recipes.surge.sh/)
 
 ## References
 
-* [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3)
+* [Research button animations](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3)
 
-* [Stackoverflow](https://stackoverflow.com/questions/11184117/transparent-css-background-color)
+* [Research transparency](https://stackoverflow.com/questions/11184117/transparent-css-background-color)
 
-* [Stackoverflow](https://stackoverflow.com/questions/14294452/how-to-create-link-on-image-using-javascript)
+* [Research image links](https://stackoverflow.com/questions/14294452/how-to-create-link-on-image-using-javascript)
