@@ -37,13 +37,13 @@ class App extends Component {
     console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
-    const quote = await axios.get('http://api.quotable.io/random')
-    console.log("quote",quote);
+    // const quote = await axios.get('http://api.quotable.io/random')
+    // console.log("quote",quote);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      quote: quote.data,
+      // quote: quote.data,
       dataLoaded: true,
       randomMealArray: randomMealArray
     })
