@@ -38,9 +38,16 @@ class App extends Component {
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
     // let beer = await axios.get('https://api.punkapi.com/v2/beers/random');
+<<<<<<< HEAD
     // if(beer.data[0].image_url==null){
     //   beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
     // }
+=======
+    
+    // if(beer.data[0].image_url==null){
+    //   beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
+    // } 
+>>>>>>> 53d1ebe25eba3dde6c983e34d698d24ccf74ea68
     // console.log("beer",beer.data[0]);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
