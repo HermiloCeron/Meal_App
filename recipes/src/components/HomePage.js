@@ -41,7 +41,7 @@ class HomePage extends Component{
   render(){
     return(
       <div>
-        <div>Find recipes from all over the world!</div>
+        <div classname='div10'>Find recipes from all over the world!</div>
 
         <div className='div-header'>Search By Category</div>
 
@@ -95,7 +95,9 @@ class HomePage extends Component{
             placeholder='Enter ingredient'
             value={this.state.ingredientAuxiliar}
             onChange={this.handleChange}
+          
           />
+          
           <select name='ingredient'>
             {this.state.suggestions.map((ingredient,index)=>(
               <option

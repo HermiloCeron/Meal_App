@@ -37,6 +37,10 @@ body {
 header {
   background-color: #040F0F;
   color: #E8E8E9;
+  text-align: justify;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 20px;;
 }
 
 footer {
@@ -44,10 +48,11 @@ footer {
   color: #E8E8E9;
 }
 
+
 form {
   background-color: #0E3013;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-right: 100px;
+  margin-left: 100px;
   display: flex;
   padding: 20px;
 }
@@ -68,7 +73,9 @@ select {
   cursor: pointer;
 }
 
-.button1:hover {background-color: #3e8e41}
+.button1:hover {
+  background-color: #3e8e41
+}
 
 .button1:active {
   background-color: #3e8e41;
@@ -86,7 +93,8 @@ select {
   padding: 2px;
   cursor: pointer;
 }
-.search:hover {background-color: #3e8e41}
+.search:hover {
+  background-color: #3e8e41}
 
 .search:active {
   background-color: #3e8e41;
@@ -99,13 +107,17 @@ select {
   color: #E8E8E9;
   border: #040F0F;
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
   max-width: 100%;
   text-align: center;
   margin-right: 5px;
   margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
 
 }
+
 
 .image-text {
   position: absolute;
@@ -123,6 +135,11 @@ select {
   margin-bottom: 20px;
   margin-top: 20px;
 
+}
+
+.return-to-HomePage {
+  color:#3e8e41;
+  text-decoration: none;
 
 }
 
@@ -144,6 +161,7 @@ select {
   height:225px;
   width: 225px;
 }
+
 
 @keyframes App-logo-spin {
   from {
