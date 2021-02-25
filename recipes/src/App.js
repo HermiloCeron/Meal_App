@@ -37,16 +37,17 @@ class App extends Component {
     console.log(randomMealArray)
     //Testing weather ticker, jokes, or advertisements
     // const quote =await axios.get("https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand");
-    let beer = await axios.get('https://api.punkapi.com/v2/beers/random');
-    if(beer.data[0].image_url==null){
-      beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
-    }
-    console.log("beer",beer.data[0]);
+    // let beer = await axios.get('https://api.punkapi.com/v2/beers/random');
+    
+    // if(beer.data[0].image_url==null){
+    //   beer.data[0].image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Duff_beer.jpg/110px-Duff_beer.jpg";
+    // } 
+    // console.log("beer",beer.data[0]);
     this.setState({
       categories: categories.data.meals.map(category=>(category.strCategory)),
       areas: areas.data.meals.map(area=>(area.strArea)),
       ingredients: ingredients.data.meals.map(ingredient=>(ingredient.strIngredient)),
-      beer: beer.data[0],
+      // beer: beer.data[0],
       dataLoaded: true,
       randomMealArray: randomMealArray
     })
