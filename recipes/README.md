@@ -108,4 +108,8 @@ An app where you can find recipes based on simple search criteria.
 
 ## References
 
-* [Reference description](Link)
+* [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3)
+
+* [Stackoverflow](https://stackoverflow.com/questions/11184117/transparent-css-background-color)
+
+* [Stackoverflow](https://stackoverflow.com/questions/14294452/how-to-create-link-on-image-using-javascript)
