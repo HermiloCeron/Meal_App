@@ -104,7 +104,7 @@ An app where you can find recipes based on simple search criteria.
 
 * [GitHub repository](https://github.com/mgboiler2020/Meal_App/tree/master/recipes)
 
-* [Surge deployment]()
+* [Surge deployment](http://moh_recipes.surge.sh/)
 
 ## References
 
