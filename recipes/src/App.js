@@ -138,7 +138,9 @@ class App extends Component {
         </aside>
         <footer>
           <p> Sponsored by: </p>
-          <img src={this.state.beer.image_url} />
+          <div>
+            <img id='sponsor' src={this.state.beer.image_url} />
+          </div>
         </footer>
       </div>
     );

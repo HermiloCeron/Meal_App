@@ -104,7 +104,7 @@ select {
   text-align: center;
   margin-right: 5px;
   margin-left: 5px;
-  
+
 }
 
 .image-text {
@@ -230,4 +230,9 @@ select {
 
 aside {
   margin: 20px;
+  text-align: center;
+}
+
+#sponsor{
+  width:100px;
 }
