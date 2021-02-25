@@ -164,6 +164,7 @@ select {
 .md-image-cover {
   object-fit: cover;
   padding: 5px;
+  border-radius: 10px;
 }
 
 .md-image-text {
